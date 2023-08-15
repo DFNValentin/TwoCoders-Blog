@@ -31,14 +31,17 @@ SECRET_KEY = config('THE_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://two-coders.site',
+                 'https://twc-blog.up.railway.app', ]
 
 CORS_ALLOWED_ORIGINS = [
     'https://twc-blog.up.railway.app',
+    'https://two-coders.site',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://twc-blog.up.railway.app'
+    'https://twc-blog.up.railway.app',
+    'https://two-coders.site',
 ]
 
 
