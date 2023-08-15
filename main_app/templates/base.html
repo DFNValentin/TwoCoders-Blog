@@ -5,7 +5,7 @@
 
 <head>
 
-    <meta property="og:image" content="https://www.example.com/hello-world/thumbnail.png">
+    <meta property="og:image" content="{% static 'images/icon.jpg' %}">
     <meta property="og:image:type" content="{% static 'images/icon.jpg' %}">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -19,8 +19,6 @@
 
     <meta name="twitter:title" content="{{ post.title }}">
     <meta name="twitter:description" content="{{ post.intro }}">
-    <meta name="theme-color" content="#ffffff">
-
 
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,9 +28,7 @@
     <link rel="stylesheet" href="{% static 'styles.css' %}" />
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+
 
     <script src="{% static 'script.js' %}" defer></script>
 
@@ -41,7 +37,6 @@
 
 <body>
 
-    <!-- START NAV -->
     <nav class="navbar is-gray-dark">
         <div class="container">
             <div class="navbar-brand">

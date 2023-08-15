@@ -16,12 +16,12 @@
                     <div class="column is-8 is-offset-2">
                         {% if post.image %}
                         <figure class='image mb-3 is-16by9'>
-                            <img src="{{ post.image.url }}">
+                            <img alt="intro image"  src="{{ post.image.url }}">
                         </figure>
                         {% endif %}
-                        <p class="is-pulled-right" style="margin-top: 10px;"  >Created by {{ post.created_by }} </p> 
+                        <p class="is-pulled-right is-mt-3 ">Created by {{ post.created_by }} </p> 
                         <div class="content is-medium">
-                            <h1 class="title title-h1-text title is-size-1-desktop is-size-2-tablet is-size-4-mobile " style="margin-top: 70px;">{{ post.title }}</h1>
+                            <h1 class="detail-h1 title-h1-text title is-size-1-desktop is-size-2-tablet is-size-4-mobile  ">{{ post.title }}</h1>
 
                             
                             <p>intro : {{ post.intro }}</p>
