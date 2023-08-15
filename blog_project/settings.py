@@ -34,11 +34,11 @@ DEBUG = False
 ALLOWED_HOSTS = ['*']
 
 CORS_ALLOWED_ORIGINS = [
-    'twc-blog.up.railway.app',
+    'https://twc-blog.up.railway.app',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'twc-blog.up.railway.app'
+    'https://twc-blog.up.railway.app'
 ]
 
 
