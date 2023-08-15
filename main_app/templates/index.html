@@ -17,14 +17,14 @@
                         </figure>
                     {% endif %}
                     <br>
-                    <h2 class="subtitle is-4 is-pulled-right" >{{ post.created_at|timesince }} ago</h2>
+                    <h2 class="subtitle is-pulled-right  is-size-6-mobile " >{{ post.created_at|timesince }} ago</h2>
                         <div class="content is-medium">
                             
                             <a href="{% url 'post_detail' post.category.slug post.slug %}">
-                                <h1 class="title"  style="margin-top: 20px;">{{ post.title }}</h1>
+                                <h1 class="title-h1-text title is-size-1-desktop is-size-2-tablet is-size-4-mobile " >{{ post.title }}</h1>
                                 <p>{{ post.intro }}</p>
                             </a>
-                            <p class="is-pulled-right" style="margin-top: 3px;" > Created by:  {{ post.created_by }}</p>
+                            <p class="intro-text is-size-7-mobile is-pulled-right is-pt-3 "> Created by:  {{ post.created_by }}</p>
                             <br>
                             <hr class="has-background-black" >
                             <br>
