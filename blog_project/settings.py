@@ -17,7 +17,7 @@ import cloudinary
 # another imports
 import os
 from pathlib import Path
-
+from decouple import config
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-l6vn#wwv4f)aqx-$p(!9zc09*uyfs+*w&-zwk4yiqdtzqoggmc'
+SECRET_KEY = config('THE_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -163,5 +163,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 cloudinary.config(
     cloud_name="dqatnttlt",
     api_key="731459523883795",
-    api_secret="h-pUHCLANaBQAUbfZYXDtWiME50",
+    api_secret=config('THE_API_SECRET'),
 )
