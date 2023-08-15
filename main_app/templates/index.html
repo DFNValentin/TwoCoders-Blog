@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container">
+            <section class="section">
+                <div class="columns">
+                    <div class="column is-8 is-offset-2">
+                        {% for post in posts %}
+                        {% if post.image %}
+                        <figure class='image is-16by9'>
+                            <img src="{{ post.image.url }}">
+                        </figure>
+                    {% endif %}
+                    <br>
+                    <h2 class="subtitle is-4 is-pulled-right" >{{ post.created_at|timesince }} ago</h2>
+                        <div class="content is-medium">
+                            
+                            <a href="{% url 'post_detail' post.category.slug post.slug %}">
+                                <h1 class="title"  style="margin-top: 20px;">{{ post.title }}</h1>
+                                <p>{{ post.intro }}</p>
+                            </a>
+                            <p class="is-pulled-right" style="margin-top: 3px;" > Created by:  {{ post.created_by }}</p>
+                            <br>
+                            <hr class="has-background-black" >
+                            <br>
+                        </div>
+                        {% empty %}
+                        <div>
+                            <code>  Stay with us, Awesome posts coming soon...  </code> <br> <br>
+
+
+                            <pre>Why C Developers don't touch the grass ?
+                                        ...Because they don't have methods<pre>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
