@@ -1,7 +1,9 @@
 @font-face {
     font-family: 'Lora';
-    src: url('./fonts/Lora-VariableFont_wght.ttf');
+    src: url('.Lora-VariableFont_wght.ttf');
 }
+
+;
 
 body {
     font-family: 'Lora', sans-serif;
