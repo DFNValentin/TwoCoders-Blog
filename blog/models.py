@@ -59,6 +59,7 @@ class Resources(models.Model):
 
     class Meta:
         ordering = ('-created_at', )
+        verbose_name_plural = 'Resources'
 
     def __str__(self):
         return self.title
