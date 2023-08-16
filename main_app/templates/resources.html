@@ -1,10 +1,32 @@
 {% extends 'base.html' %}
 
+{% load extras_blog %}
 
 {% block title %} Resources {% endblock %}
 
 {%block content%}
 
-<h1>Working on this page..</h1>
+<section class="hero">
+    <div class="hero-body">
+        <div class="container">
+            
+            <section class="section">
+                <div class="columns">
+                    <div class="column is-8 is-offset-2">
+                        {% for resource in resources %}
+                    <br>
+                        <div class="content is-medium">
+                                <h1 class="title-h4-text title is-size-3-desktop  has-text-centered  is-size-3-tablet is-size-4-mobile " >{{resource.title}}</h1>
+                                <p>{{ resource.body|convert_markdown|safe }}</p>
+                            <hr class="has-background-black" >
+                            <br>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
 
 {% endblock %}
