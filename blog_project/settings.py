@@ -52,7 +52,7 @@ CSRF_TRUSTED_ORIGINS = [
 ]
 
 
-CACHE_MIDDLEWARE_SECONDS = 1800  # Cache 30 min
+CACHE_MIDDLEWARE_SECONDS = 180
 
 
 # Application definition
