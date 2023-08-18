@@ -33,6 +33,14 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
+# Set SameSite attribute for cookies
+SESSION_COOKIE_SAMESITE = 'None'  # or 'Lax' or 'Strict'
+
+# Set Secure attribute for cookies (only sent over HTTPS)
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+
+
 CORS_ALLOWED_ORIGINS = [
     'https://twc-blog.up.railway.app',
     'https://two-coders.site',
