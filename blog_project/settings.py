@@ -39,6 +39,8 @@ SESSION_COOKIE_SAMESITE = 'None'  # or 'Lax' or 'Strict'
 # Set Secure attribute for cookies (only sent over HTTPS)
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_CONTENT_POLICY = "frame-ancestors 'self'"
 
 
 CORS_ALLOWED_ORIGINS = [
