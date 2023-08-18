@@ -52,6 +52,9 @@ CSRF_TRUSTED_ORIGINS = [
 ]
 
 
+CACHE_MIDDLEWARE_SECONDS = 1800  # Cache 30 min
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -74,6 +77,9 @@ MIDDLEWARE = [
 
     "whitenoise.middleware.WhiteNoiseMiddleware",
 
+    'django.middleware.cache.UpdateCacheMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.cache.FetchFromCacheMiddleware',
 
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
