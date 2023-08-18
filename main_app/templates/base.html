@@ -5,6 +5,10 @@
 
 <head>
 
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta name="description"
         content="Two Coders&#39; Blogs is a blog where two passionate programmers share their insights, tips, and tricks on coding, testing, and various other topics. Whether you&#39;re looking for life hacks, book recommendations, music suggestions, or just some fun and interesting stories, this blog has something for you. Join us as we explore the world of programming and beyond.">
 
@@ -12,14 +16,11 @@
     <meta name="author" content="Valentin">
     <meta property="og:title" content="{{post.title}}">
     <meta property="og:description" content="{{ post.intro }}">
-    <meta http-equiv="Content-type" content="text/html;" />
-
 
     <meta name="twitter:title" content="{{ post.title }}">
     <meta name="twitter:description" content="{{ post.intro }}">
 
-    <meta charset='utf-8'>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title> two coders' blogs | {% block title %}{% endblock %}</title>
     <link rel="icon" type="image/jpg" href="{% static 'images/icon.jpg' %}" />
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.4/css/bulma.min.css" />
@@ -98,7 +99,7 @@
     </footer>
 
 
-    <script src="{% static 'script.js' %}"></script>
+    <script defer src="{% static 'script.js' %}"></script>
 
 </body>
 
