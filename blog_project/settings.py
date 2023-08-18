@@ -182,4 +182,5 @@ cloudinary.config(
     cloud_name="dqatnttlt",
     api_key="731459523883795",
     api_secret=config('THE_API_SECRET'),
+    secure=True
 )
