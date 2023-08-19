@@ -41,6 +41,7 @@ def contact(request):
                       ['valentin@two-coders.site'], html_message=html)
 
             return redirect('index')
+
     else:
         form = ContactForm()
     return render(request, 'contact.html', {'form': form})

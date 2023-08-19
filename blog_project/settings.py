@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 # Cloudinary Imports
+from django.contrib.messages import constants as messages_constants
 import cloudinary.api
 import cloudinary.uploader
 import cloudinary
@@ -61,6 +62,10 @@ CSRF_TRUSTED_ORIGINS = [
     'https://two-coders.site',
 ]
 
+
+MESSAGE_TAGS = {
+    messages_constants.SUCCESS: 'success',
+}
 
 CACHE_MIDDLEWARE_SECONDS = 180
 
